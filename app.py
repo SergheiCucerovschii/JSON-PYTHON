@@ -26,9 +26,11 @@ def printEvent(data):
 
 def guestList(data):
     print(f"   GUESTS LIST  [PYCON 2020]")
-    for k in list(data['guests']):
-        print(f" {k:^30}")
-    return data
+    i = 0
+    while i in range(len(data['guests'])):
+        for g in data['guests']:
+            i += 1
+            print(f"{i:>10}. {g}")
 
 
 def inviteGuest(data):
